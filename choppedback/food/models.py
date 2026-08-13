@@ -8,11 +8,16 @@ class Table(models.Model):
 class Restaurant(models.Model):
     name = models.CharField()
 
+    def __str__(self):
+        return self.name
+
 
 class MenuItem(models.Model):
     name = models.CharField()
     restaurant = models.ForeignKey(Restaurant, on_delete=models.CASCADE)
 
-    price = models.DecimalField()
+    # stored in smallest possible currency (INR 0.01)
+    price = models.IntegerField()
+
     is_veg = models.BooleanField()
     is_available = models.BooleanField()
