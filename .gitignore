@@ -1,6 +1,12 @@
 # Django
 db.sqlite3
 
+# Firebase
+firebase-keyconfig.json
+
+# Environment secrets
+.env
+
 # Python-generated files
 __pycache__/
 *.py[oc]
